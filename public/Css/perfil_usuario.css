@@ -1,0 +1,17 @@
+.page-navigation a {
+    margin: 0 2px;
+    display: inline-block;
+    padding: 3px 5px;
+    color: #ffffff;
+    background-color: #EB0029;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #EB0029;
+  }
+  
+  .page-navigation a[data-selected] {
+    border: 2px solid #EB0029;
+    background-color: white;
+    color: #EB0029;
+  }

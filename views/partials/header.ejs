@@ -1,0 +1,76 @@
+<header>
+    <div class="cabecera">
+        <a class="link_bcn" href="https://www.barcelona.cat/es/">www.barcelona.cat</a>
+        <div class="buscador_cabecera">
+            <input id="search" type="search" name="busqueda" placeholder="Busca en barcelona.cat">
+            <input id="boton" type="image" src="imagenes/lupa.png">
+            <form id="Desplegable" action="#">
+                <select name="lenguajes" id="lang">
+                    <option value="Español">Español</option>
+                    <option value="Catalan">Catalan</option>
+                </select>
+            </form>
+        </div>
+        <a href="https://ajuntament.barcelona.cat/es/"><img id="logo_ayuntamiento"
+                src="imagenes/Ajuntament-de-Barcelona.jpg" alt="logo Ayuntamiento"></a>
+    </div>
+    <div class="bloque_nav">
+        <div class="logo-nav">
+            <a href="/"><img id=logo_bicing src="imagenes/Bicing_logo.png" alt="logo"></a>
+            <nav class="botones">
+                <ul class="nav-botones">
+                    <li>
+                        <a href="/"><img src="imagenes/facebook.png" style="height:20px;"></a>
+                    </li>
+                    <li>
+                        <a href="/"><img src="imagenes/insta.png" style="height:20px;"></a>
+                    </li>
+                    <li>
+                        <a href="/"><img src="imagenes/twitter.png" style="height:20px;"></a>
+                    </li>
+                    <% if (session) { %>
+                        <li>
+                            <a id="boton_a" href="/perfil_usuario"><input id="perfil_usuario" type="button" value="PERFIL"></a>
+                        </li>
+                        <li>
+                            <a id="boton_a" href="/logout"><input id="logout" type="button" value="CERRAR SESIÓN" style="min-width: 130px;"></a>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <a id="boton_a" href="/bicing_login"><input id="inicia_sesion" type="button" value="INICIA SESIÓN"></a>
+                        </li>
+                        <li>
+                            <a id="boton_a" href="/bicing_register"><input id="alta" type="button" value="DATE DE ALTA"></a>
+                        </li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+        <nav>
+            <ul class="nav-seccion-central">
+                <li>
+                    <a href="/">Mapa de disponibilidad</a>
+                </li>
+
+                <li>
+                    <a href="/">Noticias</a>
+                </li>
+                <li>
+                    <a href="/">Tarifas</a>
+                </li>
+                <li>
+                    <a href="/">Ventajas</a>
+                </li>
+                <li>
+                    <a href="/">Apps Bicing</a>
+                </li>
+                <li>
+                    <a href="/">FAQS y Normas</a>
+                </li>
+                <li>
+                    <a href="/bicing_contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

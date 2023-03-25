@@ -1,0 +1,53 @@
+<!-- SINTAXIS HTML  -->
+<!-- <nombre_etiqueta atributo="valor">CONTENIDO</nombre_etiqueta> -->
+<!-- etiqueta que dice al navegador que es un doc. HTML -->
+<!DOCTYPE html>
+<!-- etiqueta contenedora de todos los elementos HTML -->
+<html lang="es">
+<!-- head: contiene los elementos de config. de la pag. web -->
+
+<head>
+    <!-- codifica los caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- compatibilidad con IE EDGE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- para que sea correcta la visualizacion en Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo de la pag web  -->
+    <title>Contacto</title>
+    <!-- link a css  -->
+    <link rel="stylesheet" href="css/bicing_main.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <script type="module" src="js/contacto.js"></script>
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <!-- dentro de la etiqueta body, añadimos los elementos visuales de nuestra pag web -->
+    <%- include('partials/header') %>
+    <main>
+        <div class="contacto">
+            <div class="Form_contacto">
+                <form class="register">
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Kalam&family=M+PLUS+Rounded+1c:wght@300&family=Noto+Sans+Mono:wght@200&family=Raleway:wght@300&display=swap');
+                    </style>
+                    <h3>Formulario de Contacto</h3>
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" id="Nombre" placeholder="Nombre" name="Nombre">
+                    <label for="Email">Email:</label>
+                    <input type="text" id="Email" placeholder="Email" name="Email">
+                    <label for="Mensaje">Mensaje:</label>
+                    <textarea type="text" id="Mensaje" placeholder="Mensaje (min 20 caract)" name="Mensaje"></textarea>
+                    <input type="button" value="Enviar" id="regBTN">
+                    <div id="insertarCAJA" style="color: red; font-weight: bold; display: none; text-align: center;"></div>
+                </form>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1QTxS8Zr5znhnWDbHvg07GaW4xXHEJiU&ehbc=2E312F" width="100%" height="480"></iframe>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>

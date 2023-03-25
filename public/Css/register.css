@@ -1,0 +1,51 @@
+.register {
+    padding: 10px;
+    width: 400px;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+    margin: 20px;
+    text-align: center;
+}
+
+.register input {
+    padding: 4px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#regBTN {
+    width: 40%;
+    margin: auto;
+    margin-top: 25px;
+    display: block;
+    background: #EB0029;
+    color: white;
+
+    border-radius: 200px;
+    padding: 11px 15px;
+
+    font-size: 1.0rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#regBTN:hover {
+    background-color: transparent;
+    color: #EB0029;
+    border: #EB0029 2px solid;
+    transition: all 0.3s ease-out;
+}
+
+#insertarCAJA {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 17px;
+
+}

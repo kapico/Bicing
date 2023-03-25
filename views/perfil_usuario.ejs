@@ -1,0 +1,100 @@
+<!-- SINTAXIS HTML  -->
+<!-- <nombre_etiqueta atributo="valor">CONTENIDO</nombre_etiqueta> -->
+<!-- etiqueta que dice al navegador que es un doc. HTML -->
+<!DOCTYPE html>
+<!-- etiqueta contenedora de todos los elementos HTML -->
+<html lang="es">
+<!-- head: contiene los elementos de config. de la pag. web -->
+
+<head>
+    <!-- codifica los caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- compatibilidad con IE EDGE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- para que sea correcta la visualizacion en Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo de la pag web  -->
+    <title>Perfil</title>
+    <!-- link a css  -->
+    <link rel="stylesheet" href="css/bicing_main.css">
+    <link rel="stylesheet" href="css/perfil_usuario.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/register.css">
+    
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <!-- dentro de la etiqueta body, añadimos los elementos visuales de nuestra pag web -->
+    <%- include('partials/header') %>
+        <!-- contenido principal -->
+        <main>
+            <h1>Welcome <%= user %></h1>
+            <table style="width: 100%;" id="tabla">
+                <thead>
+                    <tr>
+                        <td>ID alquiler</td>
+                        <td>Bicicleta</td>
+                        <td>Fecha de recogida</td>
+                        <td>Fecha de devolución</td>
+                        <td>Total del viaje</td>
+                        <td>Factura</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i!=viajes.length; i++){ %>
+                        <tr>
+                            <td><%= viajes[i].ID_alquiler %></td>
+                            <td><%= viajes[i].BICICLETA_ID_Bici %></td>
+                            <td><%= viajes[i].Fecha_recogida %></td>
+                            <td><%= viajes[i].Fecha_devolucion %></td>
+                            <td><%= viajes[i].Total_viaje %></td>
+                            <td><%= viajes[i].FACTURACION_idFACTURACION %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </main>
+        <% if (detector) { %>
+            <div>
+                <a id="boton_a" href="/alquilar_bici"><input id="alquilar" type="button" value="Devolver bici"></a>
+            </div>
+        <% } else { %>
+            <div>
+                <a id="boton_a" href="/alquilar_bici"><input id="alquilar" type="button" value="Alquilar bici"></a>
+            </div>
+        <% } %>
+        <div>
+            <a id="boton_a"><input id="modal_eliminar" type="button" value="Eliminar Cuenta"></a>
+        </div>
+        <%- include('partials/footer') %>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Eliminar cuenta</h3>
+
+                <form class="register">
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Kalam&family=M+PLUS+Rounded+1c:wght@300&family=Noto+Sans+Mono:wght@200&family=Raleway:wght@300&display=swap');
+                    </style>
+                    <p>Introduce tu contraseña</p>
+                    <label for="pass1">Contraseña:</label>
+                    <input type="password" id="pass1" placeholder="Contraseña" name="pass1">
+                    <input type="button" value="Eliminar cuenta" id="regBTN">
+                </form>
+                <div id="insertarCAJA" style="color: red; font-weight: bold;"></div>
+
+            </div>
+        </div>
+    <!-- modal js -->
+    <script src="js/modal.js"></script>
+    <!-- paginación js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-paginate.min.js"></script>
+    <script type="module" src="js/perfil_usuario.js"></script>
+</body>
+
+</html>

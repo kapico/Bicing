@@ -1,0 +1,246 @@
+/* CSS: Mediante selectores, aplico estilos a los elementos HTML */
+/* TIPOS DE SELECTORES
+Selector de etiqueta */
+body,html {
+    height: 100%;
+
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin: auto;
+    width: 100%;
+    display: block;
+    align-content: center;
+    /* border: 2px solid black; */
+}
+
+.cabecera {
+    display: flex;
+    /* border: 2px solid green; */
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.buscador_cabecera{
+    /* border: 2px solid yellow; */
+    display: flex
+}
+
+.link_bcn {
+    font-size: 17px;
+    font-weight: bold;
+    color:black;
+    margin-top: 5px;
+}
+
+.link_bcn:hover{
+    text-decoration: underline;
+}
+
+input#search{
+    width: 170px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    font-size: 10pt;
+    font-style: italic;
+    float: left;
+    color: #262626;
+    padding-left: 15px;
+    color: rgb(8, 8, 8);
+}
+
+input#boton{
+    height: 29px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    color: #262626;
+}
+
+form#Desplegable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+input#Enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+img#logo_ayuntamiento {
+    height: 40px;
+    margin-left: 80px;
+}
+
+
+.bloque_nav {
+    /* border: 2px solid red; */
+    padding: 20px 0px;
+}
+
+img#logo_bicing {
+    height: 40px;
+}
+
+.logo-nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+    margin: auto;
+    align-items: center;
+    padding: 5px;
+}
+
+ .nav-botones {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 10px;
+ }
+
+.nav-botones a {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+nav .nav-seccion-central {
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: space-between;
+    /* border: 2px solid orange; */
+    width: 70%;
+    margin: auto;
+    padding: 5px;
+}
+
+nav .nav-seccion-central a {
+    color: black;
+}
+
+.nav-seccion-central a:hover{
+    color: #EB0029;
+}
+
+
+.banner {
+    display: flex;
+    background-image: url("../Imagenes/BICING.jpg");
+    background-size: cover;
+    height: 800px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
+}
+
+.banner div{
+    font-size: 60px;
+    width: 50%;
+    color: white;
+}
+
+.banner div#b2{
+    font-size: 35px;
+    padding: 20px;
+}
+
+#boton_a input{
+    background: #EB0029;
+    color: #fff;
+    border-radius: 200px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    min-width: 120px;
+    padding: 5px;
+}
+
+#boton_a input:hover {
+    background-color: white;
+    color: #EB0029;
+    border: #EB0029 2px solid;
+    transition: all 0.3s ease-out;
+}
+
+.banner #boton_a input{
+    padding: 20px;
+    min-width: 220px;
+    font-size: 1.0rem;
+}
+
+footer {
+    /* margin: 0px; */
+    /* width: auto; */
+    display: flex;
+    justify-content: space-between;
+    /* align-content: center; */
+    /* border: 2px solid black; */
+    padding-top: 5px;
+    border-top: 1.5px solid lightgray;
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+    height: 45px;
+    background-color: white;
+}
+
+img#logo_ayuntamiento_footer {
+    height: 40px;
+}
+
+
+nav .nav_politicas {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* border: 2px solid red; */
+    margin-top: 0%;
+    font-size: 12px;
+    padding-right: 30px;
+    font-weight: bold;
+    color: #32335F;
+    padding-top: 10px;
+ }
+
+ .nav_politicas a:hover{
+    color: #EB0029;
+ }
+
+ #map {
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 5px 5px 5px rgb(157, 157, 157);
+  }

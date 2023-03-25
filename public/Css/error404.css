@@ -1,0 +1,17 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error img{
+    height: 300px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.texto_centrado{
+    color: #0E9495;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
